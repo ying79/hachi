@@ -1,3 +1,8 @@
 title: Hachi Notes 🐕
-theme: jekyll-theme-cayman
 description: Slides, summaries, and seminar notes from my research journey.
+theme: jekyll-theme-cayman
+
+markdown: kramdown
+kramdown:
+  input: GFM       
+  hard_wrap: false
