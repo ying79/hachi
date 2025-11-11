@@ -10,9 +10,6 @@ and pieces from study sessions and seminars.
 ## 🌿 Structure
 - **docs/** — contains all published notes (for GitHub Pages)  
   - `index.md` — homepage  
-  - `UAV.md` — UAV section  
-  - `mmWave.md` — mmWave section  
-  - `references.md` — reference list  
 - **images/** — figures used in the notes  
 
 ## 💡 About
