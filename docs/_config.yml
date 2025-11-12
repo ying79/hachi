@@ -1,5 +1,5 @@
 title: Hachi Notes 🐕
-description: Slides, summaries, and seminar notes from my research journey.
+description: Slides, summaries, and seminar notes.
 theme: jekyll-theme-cayman
 
 url: "https://ying79.github.io"
@@ -9,7 +9,7 @@ markdown: kramdown
 kramdown:
   input: GFM       
   hard_wrap: false
-  
+
 include:
   - assets/css
   
