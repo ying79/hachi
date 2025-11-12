@@ -1,10 +1,11 @@
-
 ---
 layout: default
 title: "UAV and mmWave Operation in CF mMIMO"
 ---
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
+<style>
+@import "{{ site.baseurl }}/assets/css/custom.css";
+</style>
 
 
 # UAV and mmWave Operation in CF mMIMO
