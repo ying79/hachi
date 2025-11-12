@@ -3,6 +3,9 @@ layout: default
 title: "UAV and mmWave Operation in CF mMIMO"
 ---
 
+<link rel="stylesheet" href="assets/css/custom.css">
+
+
 # UAV and mmWave Operation in CF mMIMO
 
 ## UAVs in Future Wireless Networks
@@ -43,7 +46,7 @@ This demonstrates its superior interference management and consistent link quali
 CF mMIMO は cellular mMIMO および user-centric mMIMO よりも UAV の上りリンク速度が高く、  
 CDF の青い曲線の右方向シフトにより、干渉抑制とリンク安定性の優位性を示している。  
 
-![Fig. 6](images/136_fig6.png)
+![Fig. 6](assets/images/136_fig6.png)
 
 ---
 
@@ -71,7 +74,7 @@ Joint optimization of UAV position, AP beamforming, and AIRS phase shift leads t
 AIRS 位置を最適化することで DL レートが大幅に向上。  
 UAV の位置、AP ビームフォーミング、および AIRS 位相の同時最適化による効果を示す。  
 
-![Fig. 7](images/138_fig7.png)
+![Fig. 7](assets/images/138_fig7.png)
  
 ### Fig. 6 — System Throughput vs Number of APs (ref 139)
 
@@ -80,7 +83,7 @@ MBS-assisted CF mMIMO shows significant throughput gain over conventional CF mMI
 
 軌道 および 電力 の最適化により、MBS 支援 CF mMIMO が従来方式より高い スループット を達成。
 
-![Fig. 6](images/139_fig6.png)
+![Fig. 6](assets/images/139_fig6.png)
 
 ---
 
@@ -128,7 +131,7 @@ Higher frequencies require more antennas to compensate for greater path loss.
 
 周波数が高くなるほど パスロス 補償 のために 必要な アンテナ数 が 増加。  
 
-![Fig. 38](images/140_fig38.png)
+![Fig. 38](assets/images/140_fig38.png)
 
 ---
 
