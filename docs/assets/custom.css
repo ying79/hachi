@@ -5,3 +5,4 @@ img {
   max-width: 79%;         
   height: auto;            
 }
+body { outline: 3px solid hotpink; }
