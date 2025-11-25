@@ -5,3 +5,18 @@ img {
   max-width: 91%;         
   height: auto;            
 }
+
+body {
+  background-image: url('{{ site.baseurl }}/assets/images/lotus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.page-content .wrapper {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  padding: 24px;
+}
