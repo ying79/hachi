@@ -3,9 +3,8 @@ layout: default
 title: "UAV and mmWave Operation in CF mMIMO"
 ---
 
-<style>
-@import "{{ site.baseurl }}/assets/css/custom.css";
-</style>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
+
 
 
 [← Back to Home]({{ site.baseurl }}/)
