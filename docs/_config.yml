@@ -10,8 +10,8 @@ description: Slides, summaries, and seminar notes.
 #theme: jekyll-theme-slate
 #theme: jekyll-theme-minimal
 #theme: jekyll-theme-midnight
-theme: jekyll-theme-architect
-#theme: jekyll-theme-leap-day
+#theme: jekyll-theme-architect # 大標題字體有點花俏
+theme: jekyll-theme-leap-day
 #theme: jekyll-theme-merlot
 #theme: jekyll-theme-dinky
 #theme: jekyll-theme-tactile
