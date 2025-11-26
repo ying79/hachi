@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "UAV and mmWave Operation in CF mMIMO"
-description: " r711"
+description: "r7Nov"
 ---
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
