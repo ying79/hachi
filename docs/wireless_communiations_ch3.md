@@ -216,7 +216,7 @@ It has:
 Since $ r_I(t) $ and $ r_Q(t) $ are independent zero-mean Gaussian variables:
 
 - $ \theta $ is **uniformly distributed**
-- $ \theta $ is **independent** of $ |r_{LP}| $
+- $ \theta $ is **independent** of \( |r_{LP}| \)
 
 ***Derivation (Change of Variables)***
 
@@ -498,7 +498,7 @@ This limitation has led to **important extensions** of the basic models.
 ##### References
 
 The pdf formulas for the **Hoyt**, **Beckmann**, and **Weibull** distributions  
-can be found in reference **[6]** of the textbook.
+can be found in reference ref-6 of the textbook.
 
 ---
 
@@ -599,7 +599,7 @@ Multicarrier modulation (e.g., OFDM) and spread spectrum:
 
 However:
 
-> They **do not eliminate multipath distortion**, because **frequency-selective fading** still occurs.
+They **do not eliminate multipath distortion**, because **frequency-selective fading** still occurs.
 
 This phenomenon is described in **Section 3.3.3**.
 
@@ -644,8 +644,7 @@ Although the approximation in (3.13)
 
 
 \[
-r(t) = \Re \left\{\, u(t)e^{j2\pi f_c t} 
-\left( \sum_i \alpha_i(t)e^{-j\phi_i(t)} \right) \right\}
+r(t) = \Re \left\{\, u(t)e^{j2\pi f_c t}\left( \sum_i \alpha_i(t)e^{-j\phi_i(t)} \right) \right\}
 \]
 
 
@@ -668,7 +667,7 @@ resolution of the individual multipath components:
 
 \[
 A_C(f_1, f_2; \Delta t)
-= \mathbf{E}\!\left[\, C^{*}(f_1; t)\, C(f_2; t + \Delta t) \right].
+= \mathbf{E}\left[\, C^{*}(f_1; t)\, C(f_2; t + \Delta t) \right].
 \]
   
   - Result: the received signal has amplitude and phase  

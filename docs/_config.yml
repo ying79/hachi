@@ -3,7 +3,7 @@ description: Slides, summaries, and seminar notes.
 
 
 # Available themes:
-#theme: jekyll-theme-cayman
+theme: jekyll-theme-cayman
 #theme: jekyll-theme-hacker
 #theme: jekyll-theme-merlot
 #theme: jekyll-theme-primer
@@ -14,7 +14,7 @@ description: Slides, summaries, and seminar notes.
 #theme: jekyll-theme-leap-day
 #theme: jekyll-theme-dinky
 #theme: jekyll-theme-tactile
-theme: jekyll-theme-time-machine 
+#theme: jekyll-theme-time-machine 
 # For more themes, see https://pages.github.com/themes/
 
 
