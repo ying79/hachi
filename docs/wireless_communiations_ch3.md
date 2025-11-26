@@ -644,15 +644,11 @@ Although the approximation in (3.13)
 
 
 \[
-r(t) = \Re \left\{\, u(t)e^{j2\pi f_c t}\left( \sum_i \alpha_i(t)e^{-j\phi_i(t)} \right) \right\}
+r(t) = \Re\left\{\, u(t)e^{j2\pi f_c t}\left(\sum_i \alpha_i(t)e^{-j\phi_i(t)} \right) \right\}
 \]
 
 
-no longer applies when the signal bandwidth  
-is large relative to the inverse of the multipath delay spread,  
-if the number of multipath components is large and the phase of each component  
-is uniformly distributed, then the received signal is still a zero-mean  
-complex Gaussian process with a Rayleigh-distributed envelope.
+no longer applies when the signal bandwidth is large relative to the inverse of the multipath delay spread, if the number of multipath components is large and the phase of each component is uniformly distributed, then the received signal is still a zero-mean complex Gaussian process with a Rayleigh-distributed envelope.
 
 ***Resolution Difference***
 
@@ -666,8 +662,7 @@ resolution of the individual multipath components:
   
 
 \[
-A_C(f_1, f_2; \Delta t)
-= \mathbf{E}\left[\, C^{*}(f_1; t)\, C(f_2; t + \Delta t) \right].
+A_C(f_1, f_2; \Delta t)=\mathbf{E}\left\{[\,C^{*}(f_1; t)\,C(f_2; t + \Delta t) \right\}].
 \]
   
   - Result: the received signal has amplitude and phase  
