@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
