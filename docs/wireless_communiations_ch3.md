@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "wireless_communiations_ch3"
+title: "Wireless Communications Chapter3"
 description: "r7Nov"
 ---
 
