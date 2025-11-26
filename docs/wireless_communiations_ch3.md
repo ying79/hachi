@@ -117,32 +117,32 @@ This paragraph combines three components of received power variation:
 
 We consider the narrowband received signal:
 
-$$
+\[
 r(t) = r_I(t)\cos(2\pi f_c t) - r_Q(t)\sin(2\pi f_c t)
-$$
+\]
 
 Both $ r_I(t) $ and $ r_Q(t) $ are **zero-mean Gaussian** RVs with equal variance $ \sigma^2 $.
 
 Thus, the envelope is:
 
-$$
+\[
 z(t) = |r(t)| = \sqrt{r_I^2(t) + r_Q^2(t)}
-$$
+\]
 
 Since the magnitude of two i.i.d. Gaussian variables follows a Rayleigh distribution,  
 the pdf of $ z $ is:
 
-$$
+\[
 p_Z(z)
 = \frac{2z}{P_r}\exp\left(-\frac{z^2}{P_r}\right),
 \qquad z \ge 0
-$$
+\]
 
 where the average received power is:
 
-$$
+\[
 P_r = 2\sigma^2
-$$
+\]
 
 
 ***Derivation Sketch***
@@ -154,18 +154,18 @@ $$
 3. Joint Gaussian → transform to polar coordinates:
    - Radius $ z $ has Rayleigh pdf
 4. Rayleigh pdf:
-   $$
+   \[
    p_Z(z)=\frac{z}{\sigma^2}\exp\left(-\frac{z^2}{2\sigma^2}\right)
-   $$
+   \]
 5. Substitute:
-   $$
+   \[
    P_r = 2\sigma^2
-   $$
+   \]
    → final form becomes textbook eq. (3.33):
 
-   $$
+   \[
    p_Z(z)=\frac{2z}{P_r}\exp\left(-\frac{z^2}{P_r}\right)
-   $$
+   \]
 
 ---
 
