@@ -7,10 +7,10 @@ description: Slides, summaries, and seminar notes.
 #theme: jekyll-theme-hacker
 #theme: jekyll-theme-merlot
 #theme: jekyll-theme-primer
-theme: jekyll-theme-slate
+#theme: jekyll-theme-slate
 #theme: jekyll-theme-minimal
 #theme: jekyll-theme-midnight
-#theme: jekyll-theme-architect
+theme: jekyll-theme-architect
 #theme: jekyll-theme-leap-day
 #theme: jekyll-theme-merlot
 #theme: jekyll-theme-dinky

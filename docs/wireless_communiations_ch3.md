@@ -6,22 +6,25 @@ description: "r7Nov"
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
 
+{% include mathjax.html %}
+
 
 [← Back to Home]({{ site.baseurl }}/)
 
+# Wireless Communications Chapter3
 
 ### PSD as pdf of Doppler Frequency
 
-- PSD \(S_r(f)\): describes how multipath power is distributed over Doppler frequency.
-- So \(S_r(f)\) can be interpreted as the **pdf of random Doppler frequency** due to multipath.
+- PSD $S_r(f)$: describes how multipath power is distributed over Doppler frequency.
+- So $S_r(f)$ can be interpreted as the **pdf of random Doppler frequency** due to multipath.
 - From Fig. 3.6:
-  - Doppler PSD \(S_{r_I}(f)\) → ∞ at \(f = \pm f_D\).
-  - Hence overall PSD \(S_r(f)\) → ∞ at \(f = \pm f_c \pm f_D\).
+  - Doppler PSD $S_{r_I}(f)$ → ∞ at $f = \pm f_D$.
+  - Hence overall PSD $S_r(f)$ → ∞ at $f = \pm f_c \pm f_D$.
 - In practice:
-  - Uniform-scattering model is idealized; real PSD just **peaks** near \(f \approx f_c \pm f_D\).
+  - Uniform-scattering model is idealized; real PSD just **peaks** near $f \approx f_c \pm f_D$.
 - Intuition:
-  - Doppler shift \(f_D(\theta)\) is cosine-shaped.
-  - Under the model, PSD \(S_r(f)\) ≈ pdf of random Doppler frequency \(f_D(\theta)\).
+  - Doppler shift $f_D(\theta)$ is cosine-shaped.
+  - Under the model, PSD $S_r(f)$ ≈ pdf of random Doppler frequency $f_D(\theta)$.
 
 
 ![Figure 3.6](assets/images/wirelessC_fig3_6.png)
@@ -30,7 +33,7 @@ description: "r7Nov"
 
 ### Uniform Scattering and Doppler pdf 
 
-- Under **uniform scattering**, angles of arrival θ are uniformly distributed on \([0, 2\pi]\).
+- Under **uniform scattering**, angles of arrival θ are uniformly distributed on $[0, 2\pi]$.
 - Doppler shift:
   \[
   f_D(\theta) = f_D \cos(\theta)
@@ -45,8 +48,8 @@ description: "r7Nov"
   \]
 - Fig. 3.7:
   - Left: cosine Doppler shift vs. angle.
-  - Right: PSD \(S_r(f)\) approximated using straight-line segments.
-  - Edges at \(f = \pm f_D\) correspond to high density (“delta-like” peaks).
+  - Right: PSD $S_r(f)$ approximated using straight-line segments.
+  - Edges at $f = \pm f_D$ correspond to high density (“delta-like” peaks).
 
 
 ![Figure 3.7](assets/images/wirelessC_fig3_7.png)
@@ -58,8 +61,8 @@ description: "r7Nov"
 - Goal: generate a synthetic narrowband fading process with a specified PSD.
 - Method (as described in the text):
   - Create two independent white Gaussian noise sources.
-  - Both noises have PSD \( N_0/2 \).
-  - Pass them through identical lowpass filters with frequency response \( H(f) \).
+  - Both noises have PSD $ N_0/2 $.
+  - Pass them through identical lowpass filters with frequency response $ H(f) $.
 
 ***Why (3.32) Holds — Simple PSD Shaping Principle***
 
@@ -67,8 +70,8 @@ description: "r7Nov"
   \[
   S_{\text{in}}(f) = \frac{N_0}{2}.
   \]
-- After passing through a filter with gain \( H(f) \), each frequency component is
-  scaled by \( H(f) \).
+- After passing through a filter with gain $ H(f) $, each frequency component is
+  scaled by $ H(f) $.
 - Therefore the output PSD becomes:
   \[
   S_{\text{out}}(f) = \frac{N_0}{2} |H(f)|^2.
@@ -78,7 +81,7 @@ description: "r7Nov"
 
 
 - Outputs correspond to the **in-phase (I)** and **quadrature (Q)** components.
-- Selecting \(H(f)\) shapes the spectrum to match the desired fading PSD.
+- Selecting $H(f)$ shapes the spectrum to match the desired fading PSD.
 - Communication simulation toolboxes (e.g., MATLAB) implement this PSD-shaping method.
 
 ---
@@ -93,9 +96,9 @@ This paragraph combines three components of received power variation:
 ![Figure 3.8](assets/images/wirelessC_fig3_8.png)
 
 - The dashed line represents **path loss only**, decreasing at slope  
-  \(-10\gamma\) dB/decade relative to \(\log_{10}(d/d_r)\).
+  $-10\gamma$ dB/decade relative to $\log_{10}(d/d_r)$.
 - The dotted line shows **path loss + shadowing**, where the shadowing
-  fluctuations occur over the decorrelation distance \(X_c\).
+  fluctuations occur over the decorrelation distance $X_c$.
 - The solid, highly irregular curve shows **path loss + shadowing + multipath**.
 - Multipath introduces *very fast* fluctuations on the order of  
   **half a wavelength**.
@@ -105,8 +108,8 @@ This paragraph combines three components of received power variation:
 ![Figure 3.9](assets/images/wirelessC_fig3_9.png)
 
 - “Zoomed-in” over a few meters where path loss and shadowing are constant.
-- Shows fast Rayleigh-like fluctuations of \(P_r/P_t\) (0 dB mean, variations up to -30 dB).
-- A mobile receiver traveling at constant velocity \(v\) sees a *stationary* and *ergodic* fading process.
+- Shows fast Rayleigh-like fluctuations of $P_r/P_t$ (0 dB mean, variations up to -30 dB).
+- A mobile receiver traveling at constant velocity $v$ sees a *stationary* and *ergodic* fading process.
 
 ---
 
@@ -118,7 +121,7 @@ $$
 r(t) = r_I(t)\cos(2\pi f_c t) - r_Q(t)\sin(2\pi f_c t)
 $$
 
-Both \( r_I(t) \) and \( r_Q(t) \) are **zero-mean Gaussian** RVs with equal variance \( \sigma^2 \).
+Both $ r_I(t) $ and $ r_Q(t) $ are **zero-mean Gaussian** RVs with equal variance $ \sigma^2 $.
 
 Thus, the envelope is:
 
@@ -127,7 +130,7 @@ z(t) = |r(t)| = \sqrt{r_I^2(t) + r_Q^2(t)}
 $$
 
 Since the magnitude of two i.i.d. Gaussian variables follows a Rayleigh distribution,  
-the pdf of \( z \) is:
+the pdf of $ z $ is:
 
 $$
 p_Z(z)
@@ -145,11 +148,11 @@ $$
 ***Derivation Sketch***
 
 1. Start with:
-   - \( r_I(t), r_Q(t) \sim \mathcal{N}(0,\sigma^2) \)
+   - $ r_I(t), r_Q(t) \sim \mathcal{N}(0,\sigma^2) $
 2. Define envelope:  
-   \( z = \sqrt{r_I^2 + r_Q^2} \)
+   $ z = \sqrt{r_I^2 + r_Q^2} $
 3. Joint Gaussian → transform to polar coordinates:
-   - Radius \( z \) has Rayleigh pdf
+   - Radius $ z $ has Rayleigh pdf
 4. Rayleigh pdf:
    $$
    p_Z(z)=\frac{z}{\sigma^2}\exp\left(-\frac{z^2}{2\sigma^2}\right)
@@ -184,15 +187,15 @@ p_{Z^2}(x)
 
 ***Mean power of the narrowband signal***
 
-The average power of \( r(t) \) is:
+The average power of $ r(t) $ is:
 
 \[
 P_r = 2\sigma^2
 \]
 
 Thus:
-- the amplitude \( r(t) \) is **Rayleigh distributed**
-- the instantaneous power is **exponentially distributed** with mean \( P_r = 2\sigma^2 \)
+- the amplitude $ r(t) $ is **Rayleigh distributed**
+- the instantaneous power is **exponentially distributed** with mean $ P_r = 2\sigma^2 $
 
 
 ***Equivalent lowpass representation***
@@ -204,16 +207,16 @@ r_{LP}(t) = r_I(t) + j r_Q(t)
 \]
 
 It has:
-- the same power as the envelope \( z(t) \)
+- the same power as the envelope $ z(t) $
 - phase:
 \[
 \theta = \arctan \left( \frac{r_Q(t)}{r_I(t)} \right)
 \]
 
-Since \( r_I(t) \) and \( r_Q(t) \) are independent zero-mean Gaussian variables:
+Since $ r_I(t) $ and $ r_Q(t) $ are independent zero-mean Gaussian variables:
 
-- \( \theta \) is **uniformly distributed**
-- \( \theta \) is **independent** of \( |r_{LP}| \)
+- $ \theta $ is **uniformly distributed**
+- $ \theta $ is **independent** of $ |r_{LP}| $
 
 ***Derivation (Change of Variables)***
 
@@ -257,7 +260,7 @@ p_{Z^2}(x)=\frac{1}{P_r}e^{-x/P_r}
 
 Consider a channel with Rayleigh fading and average received power:
 
-- \(P_r = 20 \text{ dBm} = 100 \text{ mW}\)
+- $P_r = 20 \text{ dBm} = 100 \text{ mW}$
 
 We want to compute the probability that the received power is:
 
@@ -272,7 +275,7 @@ From earlier results:
 p_{Z^2}(x) = \frac{1}{P_r} e^{-x/P_r}, \qquad x \ge 0
 \]
 
-Given \(P_r = 100\ \text{mW}\), we compute:
+Given $P_r = 100\ \text{mW}$, we compute:
 
 \[
 \Pr(Z^2 < 10)
@@ -286,7 +289,7 @@ Final Result
 \]
 
 Thus, in this Rayleigh fading channel,  
-the probability that the received power is below \(10\ \text{mW}\) is **9.5%**.
+the probability that the received power is below $10\ \text{mW}$ is **9.5%**.
 
 ---
 
@@ -294,12 +297,12 @@ the probability that the received power is below \(10\ \text{mW}\) is **9.5%**.
 
 #### 1. Model Overview
 When a **LOS (line-of-sight) component** exists, the received in-phase and quadrature components become:
-- \( r_I = s_I + n_I \)
-- \( r_Q = s_Q + n_Q \)
+- $ r_I = s_I + n_I $
+- $ r_Q = s_Q + n_Q $
 
 Where:
-- \( s_I, s_Q \): deterministic LOS components  
-- \( n_I, n_Q \sim \mathcal{N}(0,\sigma^2) \): scattered Gaussian components  
+- $ s_I, s_Q $: deterministic LOS components  
+- $ n_I, n_Q \sim \mathcal{N}(0,\sigma^2) $: scattered Gaussian components  
 - LOS amplitude:
 
 \[
@@ -315,8 +318,8 @@ z = \sqrt{r_I^2 + r_Q^2}
 
 #### 2. Rician Envelope PDF
 
-Because \(r_I\) and \(r_Q\) are Gaussian with **nonzero means**,  
-\(z\) follows the **Rician distribution**:
+Because $r_I$ and $r_Q$ are Gaussian with **nonzero means**,  
+$z$ follows the **Rician distribution**:
 
 \[
 p_Z(z)
@@ -328,10 +331,10 @@ I_0\!\left( \frac{2zs}{P_r} \right),
 \]
 
 Where:
-- \(I_0(\cdot)\) is the modified Bessel function of order 0.
+- $I_0(\cdot)$ is the modified Bessel function of order 0.
 
 
-#### 3. Rice Factor \(K\)
+#### 3. Rice Factor $K$
 
 LOS vs. scattered power ratio:
 
@@ -340,8 +343,8 @@ K = \frac{s^2}{2\sigma^2}
 \tag{3.35}
 \]
 
-- \(K = 0\): Rayleigh fading  
-- Larger \(K\): stronger LOS, weaker fading  
+- $K = 0$: Rayleigh fading  
+- Larger $K$: stronger LOS, weaker fading  
 
 
 #### 4. Average Received Power
@@ -354,10 +357,10 @@ P_r
 \]
 
 Interpretation:
-- LOS contributes \(s^2\)
-- Scattered components contribute \(2\sigma^2\)
+- LOS contributes $s^2$
+- Scattered components contribute $2\sigma^2$
 
-#### 5. Rician PDF in Terms of \(K\)
+#### 5. Rician PDF in Terms of $K$
 
 Substitute:
 
@@ -379,7 +382,7 @@ I_0\!\left( 2z\sqrt{ \frac{K(1+K)}{P_r} } \right)
 
 #### 6. Normalized Envelope PDF
 
-Let \( u = z / \sqrt{P_r} \).  
+Let $ u = z / \sqrt{P_r} $.  
 Then pdf becomes:
 
 \[
@@ -408,7 +411,7 @@ K follows his naming convention in the classical Rice distribution.
 
 #### 2. Envelope Distribution (Eq. 3.39)
 
-The PDF of the Nakagami fading envelope \( z \) is:
+The PDF of the Nakagami fading envelope $ z $ is:
 
 \[
 p_Z(z) =
@@ -418,9 +421,9 @@ p_Z(z) =
 \]
 
 ##### Parameters
-- \( P_r \): average received power  
-- \( \Gamma(\cdot) \): Gamma function  
-- \( m \): fading parameter controlling severity
+- $ P_r $: average received power  
+- $ \Gamma(\cdot) $: Gamma function  
+- $ m $: fading parameter controlling severity
 
 #### 3. Important Special Cases
 
@@ -435,7 +438,7 @@ m = 1 \quad \Rightarrow \text{Nakagami reduces to Rayleigh fading}
 m \approx \frac{(K + 1)^2}{2K + 1}
 \]
 
-The Nakagami distribution resembles a Rician distribution with parameter \(K\).
+The Nakagami distribution resembles a Rician distribution with parameter $K$.
 
 ##### **(3) No fading**
 \[
@@ -446,13 +449,13 @@ m \rightarrow \infty \quad \Rightarrow \quad z = \sqrt{P_r} \text{ (constant)}
 #### 4. Flexibility of Nakagami Fading
 - Capable of modeling Rayleigh, Rician, and more general fading environments.
 - Measurement studies report:
-  - \( m < 1 \): fading **more severe** than Rayleigh  
-  - \( m > 1 \): **milder** fading
+  - $ m < 1 $: fading **more severe** than Rayleigh  
+  - $ m > 1 $: **milder** fading
 
 
 #### 5. Power Distribution (Eq. 3.40)
 
-Using the variable change \( x = z^2 \):
+Using the variable change $ x = z^2 $:
 
 \[
 p_{Z^2}(x) =
@@ -514,21 +517,21 @@ then the **received pulse duration** becomes:
 T + T_m \gg T
 \]
 
-where \(T_m\) is the **multipath delay spread**.  
+where $T_m$ is the **multipath delay spread**.  
 In this case the channel is called a **dispersive channel**.
 
 ***Pulse Transmission over a Multipath Channel***
 
-A pulse of width \(T\) is transmitted over several multipath components.  
+A pulse of width $T$ is transmitted over several multipath components.  
 In linear modulation (discussed in Chapter 5), each pulse carries information through its amplitude and/or phase.
 
-- If **\(T_m \ll T\)** → multipath arrivals overlap  
+- If **$T_m \ll T$** → multipath arrivals overlap  
   - Channel is **nondispersive**  
   - Only constructive/destructive interference occurs  
   - Little spreading of the pulse  
   - Little interference with the next pulse  
 
-- If **\(T_m \gg T\)** → multipath arrivals are resolvable  
+- If **$T_m \gg T$** → multipath arrivals are resolvable  
   - Channel is highly **dispersive**  
   - Multipath components arrive well-separated  
   - These delayed components interfere with later pulses → **inter-symbol interference (ISI)**
@@ -538,14 +541,14 @@ In linear modulation (discussed in Chapter 5), each pulse carries information th
 
 ![Figure 3.11](assets/images/wirelessC_fig3_11.png)
 
-- **Upper-right figure**: \(T_m \ll T\)  
+- **Upper-right figure**: $T_m \ll T$  
   - Delayed versions of the pulse overlap tightly  
-  - Effective pulse duration remains close to \(T\)  
+  - Effective pulse duration remains close to $T$  
   - Nondispersive channel  
 
-- **Lower-right figure**: \(T_m \gg T\)  
-  - Each multipath component arrives with distinct delays (\(\tau_1, \tau_2\))  
-  - The effective received pulse extends over \(T + T_m\)  
+- **Lower-right figure**: $T_m \gg T$  
+  - Each multipath component arrives with distinct delays ($\tau_1, \tau_2$)  
+  - The effective received pulse extends over $T + T_m$  
   - Causes **ISI** with the next transmitted pulse (dashed shapes)  
 
 ---
@@ -584,7 +587,7 @@ must be **much larger** than:
 \]
 
 Typical delay spreads in indoor and outdoor channels make  
-\( T \gg T_m \) **not feasible**.
+$ T \gg T_m $ **not feasible**.
 
 ***Role of Multicarrier and Spread Spectrum***
 
@@ -604,7 +607,7 @@ This phenomenon is described in **Section 3.3.3**.
 
 ### Difference Between Wideband and Narrowband Fading Models
 
-When the baseband signal bandwidth \(B_u\) becomes large such that
+When the baseband signal bandwidth $B_u$ becomes large such that
 
 \[
 T_m \approx B_u^{-1},
@@ -614,14 +617,14 @@ the narrowband assumption
 \[
 u(t - \tau_i(t)) \approx u(t)
 \]
-is no longer valid for all multipath component delays \(\tau_i(t)\).
+is no longer valid for all multipath component delays $\tau_i(t)$.
 
 ***Received Signal Behavior in Wideband Channels***
 
 The received signal becomes a **sum of multiple delayed and phase-shifted copies** of the transmitted signal:
 
-- Each multipath copy is delayed by \(\tau_i(t)\)
-- Each copy experiences a phase shift \(\phi_i(t)\)
+- Each multipath copy is delayed by $\tau_i(t)$
+- Each copy experiences a phase shift $\phi_i(t)$
 
 Thus the signal copies combine:
 
@@ -699,46 +702,46 @@ The wideband channel is characterized by the equivalent lowpass impulse response
 c(\tau, t).
 \]
 
-- \( \tau \): multipath delay
-- \( t \): time index describing channel variations
-- \( c(\tau, t) \) is the response at time \( t \) to an impulse transmitted at \( t - \tau \)
+- $ \tau $: multipath delay
+- $ t $: time index describing channel variations
+- $ c(\tau, t) $ is the response at time $ t $ to an impulse transmitted at $ t - \tau $
 
-Time variations of the channel are therefore captured by the parameter \( t \).
+Time variations of the channel are therefore captured by the parameter $ t $.
 
 ***Fourier Transform in Time: Scattering Function***
 
 To examine Doppler effects caused by motion, we take the Fourier transform of  
-\( c(\tau, t) \) with respect to \( t \):
+$ c(\tau, t) $ with respect to $ t $:
 
 \[
 C(\tau, \rho) = \int_{-\infty}^{\infty} c(\tau, t)e^{-j2\pi\rho t}\, dt.
 \tag{3.50}
 \]
 
-***Interpretation of \(C(\tau, \rho)\)***
+***Interpretation of $C(\tau, \rho)$***
 
-- \( \rho \): Doppler frequency variable  
-- \( C(\tau, \rho) \) is the **deterministic scattering function**
+- $ \rho $: Doppler frequency variable  
+- $ C(\tau, \rho) $ is the **deterministic scattering function**
 - Represents how multipath energy is distributed over:
-  - **Delay** \( \tau \)
-  - **Doppler frequency** \( \rho \)
+  - **Delay** $ \tau $
+  - **Doppler frequency** $ \rho $
 
 ***Physical Meaning***
 
-- Motion of the transmitter/receiver introduces Doppler shifts \( f_D \)
-- Since \(C(\tau, \rho)\) is the FT of \(c(\tau, t)\), it captures the Doppler characteristics of the channel
+- Motion of the transmitter/receiver introduces Doppler shifts $ f_D $
+- Since $C(\tau, \rho)$ is the FT of $c(\tau, t)$, it captures the Doppler characteristics of the channel
 - A statistical version for random channels is derived in Section 3.3.4
 
 ---
 
 ### Time-Varying Channel Impulse Response: Statistical Characterization  
 
-- In practice, the time‐varying channel impulse response \( c(\tau, t) \) in (3.6) is **random** rather than deterministic.  
+- In practice, the time‐varying channel impulse response $ c(\tau, t) $ in (3.6) is **random** rather than deterministic.  
 - This randomness comes from the random amplitudes, phases, and delays of the random number of multipath components.  
 - Therefore, the channel must be characterized **statistically** or through measurements.
 
 - When the number of multipath components is large and no dominant LOS component exists, the **Central Limit Theorem (CLT)** allows us to treat  
-  \( c(\tau, t) \) as a **zero-mean complex Gaussian process**.
+  $ c(\tau, t) $ as a **zero-mean complex Gaussian process**.
 
 - As a consequence, the statistical characterization of the channel is fully determined by the  
   - mean  
@@ -748,7 +751,7 @@ C(\tau, \rho) = \int_{-\infty}^{\infty} c(\tau, t)e^{-j2\pi\rho t}\, dt.
 
 - Similar to the narrowband assumption, each multipath component's phase is assumed to be **uniformly distributed**.
 
-- Therefore, the in-phase and quadrature components of \( c(\tau, t) \)  
+- Therefore, the in-phase and quadrature components of $ c(\tau, t) $  
   - are **independent Gaussian processes**,  
   - have the **same autocorrelation**,  
   - have **zero mean**,  
@@ -766,7 +769,7 @@ C(\tau, \rho) = \int_{-\infty}^{\infty} c(\tau, t)e^{-j2\pi\rho t}\, dt.
 
 ***Autocorrelation Function Definition***
 
-The time-varying channel impulse response \(c(\tau, t)\) is characterized statistically by its 
+The time-varying channel impulse response $c(\tau, t)$ is characterized statistically by its 
 
 *autocorrelation function*:
 
@@ -780,7 +783,7 @@ A_c(\tau_1, \tau_2; t, t+\Delta t)
 ***WSS Assumption***
 
 Most practical wireless channels are assumed to be **wide-sense stationary (WSS)**.  
-For a WSS process, the autocorrelation depends **only on the time difference** \(\Delta t\):
+For a WSS process, the autocorrelation depends **only on the time difference** $\Delta t$:
 
 \[
 A_c(\tau_1, \tau_2; \Delta t)
@@ -788,13 +791,13 @@ A_c(\tau_1, \tau_2; \Delta t)
 \tag{3.52}
 \]
 
-This removes dependence on the absolute time \(t\).
+This removes dependence on the absolute time $t$.
 
 
 ***Uncorrelated Scattering (US)***
 
 In real environments, multipath components at different delays  
-\(\tau_1 \neq \tau_2\) often come from **different physical scatterers**, so:
+$\tau_1 \neq \tau_2$ often come from **different physical scatterers**, so:
 
 \[
 \mathbb{E}\{c^*(\tau_1; t)\,c(\tau_2; t+\Delta t)\}
@@ -814,26 +817,26 @@ When the delays are the same:
 \tag{3.54}
 \]
 
-The function \(A_c(\tau; \Delta t)\) represents the **average output power** associated with the multipath component of delay τ and time lag \(\Delta t\).
+The function $A_c(\tau; \Delta t)$ represents the **average output power** associated with the multipath component of delay τ and time lag $\Delta t$.
 
 
 ***Derivations***
 
 *(1) From (3.51) → (3.52)*
-WSS implies statistical properties do not depend on absolute time \(t\):
+WSS implies statistical properties do not depend on absolute time $t$:
 
 \[
 A_c(\tau_1, \tau_2; t, t+\Delta t)
 = A_c(\tau_1, \tau_2; \Delta t).
 \]
 
-So removing explicit dependence on \(t\) yields (3.52).
+So removing explicit dependence on $t$ yields (3.52).
 
 *(2) From (3.52) → (3.53)*  
 Uncorrelated Scattering means:
 
-- Two multipath components at delays \(\tau_1\) and \(\tau_2\) are independent unless  
-  \(\tau_1 = \tau_2\).
+- Two multipath components at delays $\tau_1$ and $\tau_2$ are independent unless  
+  $\tau_1 = \tau_2$.
 
 This independence mathematically implies:
 
@@ -856,14 +859,14 @@ A_c(\tau_1, \tau_2; \Delta t)
 \]
 
 *(3) From (3.53) → (3.54)*
-Let \(\tau_1 = \tau_2 = \tau\):
+Let $\tau_1 = \tau_2 = \tau$:
 
 \[
 A_c(\tau, \tau; \Delta t)
 = A_c(\tau; \Delta t)\,\delta[0]
 \]
 
-and since \(\delta[0]\) extracts the nonzero term, we get:
+and since $\delta[0]$ extracts the nonzero term, we get:
 
 \[
 A_c(\tau, \tau; \Delta t)
@@ -877,7 +880,7 @@ Which reproduces (3.54).
 ### Scattering Function for Random Channels
 
 The **scattering function(Eq. 3.55)** for random channels is defined as the Fourier transform of  
-the autocorrelation function \( A_c(\tau; \Delta t) \) with respect to the time-difference parameter \( \Delta t \):
+the autocorrelation function $ A_c(\tau; \Delta t) $ with respect to the time-difference parameter $ \Delta t $:
 
 \[
 S_c(\tau, \rho)
@@ -886,16 +889,16 @@ S_c(\tau, \rho)
 
 ***Meaning of the Formula***
 
-- The function \( S_c(\tau, \rho) \) gives the **average output power** of the channel  
+- The function $ S_c(\tau, \rho) $ gives the **average output power** of the channel  
   as a joint function of:
-  - **multipath delay** \( \tau \),
-  - **Doppler frequency** \( \rho \).
+  - **multipath delay** $ \tau $,
+  - **Doppler frequency** $ \rho $.
 
 - It describes how channel power is distributed **in both delay and Doppler domains**.
 
 - In contrast:
   - For **deterministic channels**, the earlier scattering function  
-    \( C(\tau, \rho) \) (Eq. 3.50) characterizes **complex channel gain**,  
+    $ C(\tau, \rho) $ (Eq. 3.50) characterizes **complex channel gain**,  
     not just average power.
 
 *Fig. 3.12: Scattering Function*
@@ -925,7 +928,7 @@ delay and frequency due to multipath and mobility.
 ### Key Characteristics of Wideband Channels
 
 The most important characteristics of the wideband channel are derived from the **channel autocorrelation**  
-\(A_c(\tau, \Delta t)\) or the **scattering function** \(S_c(\tau, \rho)\):
+$A_c(\tau, \Delta t)$ or the **scattering function** $S_c(\tau, \rho)$:
 
 - **Power Delay Profile (PDP)**  
   Describes how the average received power is distributed over multipath delays.
