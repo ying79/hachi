@@ -1,6 +1,24 @@
 title: Hachi Notes 🐕
 description: Slides, summaries, and seminar notes.
-theme: jekyll-theme-cayman
+
+
+# Available themes:
+#theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
+#theme: jekyll-theme-merlot
+#theme: jekyll-theme-solarized
+#theme: jekyll-theme-primer
+#theme: jekyll-theme-slate
+#theme: jekyll-theme-minimal
+#theme: jekyll-theme-midnight
+#theme: jekyll-theme-architect
+#theme: jekyll-theme-leap-day
+#theme: jekyll-theme-merlot
+#theme: jekyll-theme-dinky
+#theme: jekyll-theme-tactile
+#theme: jekyll-theme-time-machine 
+# For more themes, see https://pages.github.com/themes/
+
 
 url: "https://ying79.github.io"
 baseurl: "/hachi"
