@@ -642,11 +642,11 @@ Thus the signal copies combine:
 Although the approximation in (3.13) 
 
 
-
+{% raw %}
 \[
 r(t) = \Re\left\{\, u(t)e^{j2\pi f_c t}\left(\sum_i \alpha_i(t)e^{-j\phi_i(t)} \right) \right\}
 \]
-
+{% endraw %}
 
 no longer applies when the signal bandwidth is large relative to the inverse of the multipath delay spread, if the number of multipath components is large and the phase of each component is uniformly distributed, then the received signal is still a zero-mean complex Gaussian process with a Rayleigh-distributed envelope.
 
@@ -660,11 +660,12 @@ resolution of the individual multipath components:
     is less than the inverse of the signal bandwidth.  
   - These components combine at the receiver as in (3.6)
   
-
+{% raw %}
 \[
-A_C(f_1, f_2; \Delta t)=\mathbf{E}\left\{[\,C^{*}(f_1; t)\,C(f_2; t + \Delta t) \right\}].
+A_C(f_1, f_2; \Delta t)=\mathbf{E}\left[\,C^{*}(f_1; t)\,C(f_2; t + \Delta t) \right].
 \]
-  
+{% endraw %}
+
   - Result: the received signal has amplitude and phase  
     characterized by **random processes**  
     (through their autocorrelation/PSD and instantaneous distributions).
