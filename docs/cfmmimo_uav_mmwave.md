@@ -12,7 +12,7 @@ description: "r7Nov"
 
 # UAV and mmWave Operation in CF mMIMO
 
-## UAVs in Future Wireless Networks
+### UAVs in Future Wireless Networks
 
 - UAVs (Unmanned Aerial Vehicles) act as **flying base stations**.  
 - Can dynamically move to **fill coverage holes** and enhance capacity.  
@@ -27,7 +27,7 @@ description: "r7Nov"
 
 ---
 
-## UAVs as Users in CF mMIMO (refs 136, 137)
+### UAVs as Users in CF mMIMO (refs 136, 137)
 
 - CF mMIMO = many distributed APs jointly serve all users (no cells).  
 - Enables **stable uplink/downlink** even for high-altitude UAVs.  
@@ -54,7 +54,7 @@ CDF の青い曲線の右方向シフトにより、干渉抑制とリンク安�
 
 ---
 
-## UAV-Aided CF mMIMO (refs 138, 139)
+### UAV-Aided CF mMIMO (refs 138, 139)
 
 - UAVs can **assist networks** (not only act as users).  
 - 138 → UAV + Aerial RIS (AIRS) improves DL rate for users in bad channels.  
@@ -69,7 +69,7 @@ CDF の青い曲線の右方向シフトにより、干渉抑制とリンク安�
 - 文献 139：UAVを**移動型基地局**として利用し、CF mMIMO と連携。  
 - **軌道最適化＋電力制御**で全体の QoS を改善。
 
-### Fig. 7 — Performance Comparison with/without AIRS (ref 138)
+#### Fig. 7 — Performance Comparison with/without AIRS (ref 138)
  
 With AIRS location optimization, the achievable DL rate increases dramatically.  
 Joint optimization of UAV position, AP beamforming, and AIRS phase shift leads to higher efficiency.  
@@ -80,7 +80,7 @@ UAV の位置、AP ビームフォーミング、および AIRS 位相の同時�
 
 ![Fig. 7](assets/images/138_fig7.png)
  
-### Fig. 6 — System Throughput vs Number of APs (ref 139)
+#### Fig. 6 — System Throughput vs Number of APs (ref 139)
 
 MBS-assisted CF mMIMO shows significant throughput gain over conventional CF mMIMO by joint trajectory and power optimization.  
 
@@ -91,7 +91,7 @@ MBS-assisted CF mMIMO shows significant throughput gain over conventional CF mMI
 
 ---
 
-## Comparison and Summary
+### Comparison and Summary
 
 **UAV as User (refs 136, 137)**  
 → CF mMIMO enhances UAV DL/UL rates via cooperative APs.  
@@ -115,7 +115,7 @@ Together these studies show UAVs can both **benefit from** and **enhance** CF mM
 
 ---
 
-## CF mMIMO in mmWave Bands — Overview (ref 140)
+### CF mMIMO in mmWave Bands — Overview (ref 140)
 
 - High-frequency bands such as **mmWave, terahertz, optical wireless** are key technologies for **5G and beyond**.  
 - Offer **immense bandwidth** compared with sub-6 GHz microwave bands.  
@@ -139,7 +139,24 @@ Higher frequencies require more antennas to compensate for greater path loss.
 
 ---
 
-## Candidate mmWave Frequency Bands for 5G and Beyond (ref 141)
+### Overview of CF mMIMO Operation in mmWave Band
+
+- This section surveys **existing works** on CF mMIMO (Cell-Free Massive Multiple-Input Multiple-Output) operation in the **mmWave (millimeter-wave)** band.  
+- Discusses **mmWave channel characteristics** and the **adopted channel models** in prior studies.  
+- Reviews **access link operation**, considering both **channel estimation** and **DL (Downlink) / UL (Uplink)** transmission phases.  
+- Introduces how **practical system limitations** affect overall performance in mmWave CF mMIMO systems.
+
+####  
+- 本節では、**ミリ波帯における CF mMIMO の動作** に関する既存研究を概観します。  
+- **ミリ波チャネル特性** と、先行文献で採用された **チャネルモデル** について説明。  
+- **アクセスリンク動作** を、**チャネル推定** および **下り／上り通信** の両相から考察。  
+- 最後に、**実際のシステム制約** が性能に与える影響について触れます。
+
+
+---
+
+
+### Candidate mmWave Frequency Bands for 5G and Beyond (ref 141)
 
 - The **mmWave spectrum (3 – 300 GHz)** includes both *super high* (3–30 GHz) and *extremely high* (30–300 GHz) bands.  
 - The **FCC (2016)** designated specific bands for 5G mobile broadband (141):  
