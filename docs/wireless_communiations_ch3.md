@@ -136,6 +136,7 @@ the pdf of $ z $ is:
 p_Z(z)
 = \frac{2z}{P_r}\exp\left(-\frac{z^2}{P_r}\right),
 \qquad z \ge 0
+\tag{3.33}
 \]
 
 where the average received power is:
@@ -324,8 +325,8 @@ $z$ follows the **Rician distribution**:
 \[
 p_Z(z)
 = \frac{2z}{P_r}
-\exp\!\left( -\frac{z^2 + s^2}{P_r} \right)
-I_0\!\left( \frac{2zs}{P_r} \right),
+\exp\left( -\frac{z^2 + s^2}{P_r} \right)
+I_0\left( \frac{2zs}{P_r} \right),
 \qquad z \ge 0
 \tag{3.34}
 \]
@@ -643,8 +644,10 @@ Although the approximation in (3.13)
 
 
 \[
-r(t) = \Re\left\{\, u(t)e^{j2\pi f_c t}\left(\sum_i \alpha_i(t)e^{-j\phi_i(t)} \right) \right\}
+r(t)=\mathrm{Re}\left\lbrace\,u(t)e^{j2\pi f_c t}
+\left(\sum_i \alpha_i(t)\,e^{-j\phi_i(t)}\right)\right\rbrace
 \]
+
 
 no longer applies when the signal bandwidth is large relative to the inverse of the multipath delay spread, if the number of multipath components is large and the phase of each component is uniformly distributed, then the received signal is still a zero-mean complex Gaussian process with a Rayleigh-distributed envelope.
 
