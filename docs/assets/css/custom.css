@@ -8,22 +8,33 @@ img {
 
 
 html, body { min-height: 100%; }
-
-
 body {
+ 
   background: url('{{ site.baseurl }}/assets/images/lotus.jpg') center / cover no-repeat fixed;
 }
 
 
-.page-header {
-  background: transparent !important;   
-  box-shadow: none;
-  /* display: none; */
-}
-
 .page-content .wrapper {
-  background: rgba(255,255,255,.92);
+  background: rgba(255,255,255,0.92);
   border-radius: 12px;
   box-shadow: 0 10px 24px rgba(0,0,0,.08);
   padding: 24px;
 }
+
+
+.page-header {
+  background: transparent !important; 
+  padding: 12px 0 !important;         
+  min-height: 0 !important;         
+  margin-bottom: 16px;
+}
+
+.page-header .project-name,
+.page-header .project-tagline { display: none; }
+
+
+/*
+.page-header { display: none !important; }
+.main-content  { padding-top: 24px !important; } 
+.page-content  { padding-top: 0 !important; }
+*/
