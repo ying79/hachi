@@ -146,7 +146,7 @@ Higher frequencies require more antennas to compensate for greater path loss.
 - Reviews **access link operation**, considering both **channel estimation** and **DL (Downlink) / UL (Uplink)** transmission phases.  
 - Introduces how **practical system limitations** affect overall performance in mmWave CF mMIMO systems.
 
-####  
+
 - 本節では、**ミリ波帯における CF mMIMO の動作** に関する既存研究を概観します。  
 - **ミリ波チャネル特性** と、先行文献で採用された **チャネルモデル** について説明。  
 - **アクセスリンク動作** を、**チャネル推定** および **下り／上り通信** の両相から考察。  
