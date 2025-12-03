@@ -328,7 +328,7 @@ p_Z(z)
 \exp\left( -\frac{z^2 + s^2}{P_r} \right)
 I_0\left( \frac{2zs}{P_r} \right),
 \qquad z \ge 0
-\tag{3.34}
+\tag{3.35}
 \]
 
 Where:
@@ -341,7 +341,7 @@ LOS vs. scattered power ratio:
 
 \[
 K = \frac{s^2}{2\sigma^2}
-\tag{3.35}
+\tag{3.37}
 \]
 
 - $K = 0$: Rayleigh fading  
@@ -371,14 +371,13 @@ K = \frac{s^2}{2\sigma^2},
 P_r = 2\sigma^2(1 + K)
 \]
 
-Into (3.34), giving:
+Into (3.35), giving:
 
 \[
 p_Z(z)=
 \frac{2z(1+K)}{P_r}
 \exp\!\left( -K - (1+K)\frac{z^2}{P_r} \right)
 I_0\!\left( 2z\sqrt{ \frac{K(1+K)}{P_r} } \right)
-\tag{3.37}
 \]
 
 #### 6. Normalized Envelope PDF
